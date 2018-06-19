@@ -27,23 +27,22 @@ public class App {
 
         //処理
         if (isNumber(str) && ENCODE.equals(cmd)) {
-            return encode(num, SHIN_10);
-        }
-
-        if (DECODE.equals(cmd)) {
+            return  encode(num, SHIN_10);
+        } else if (DECODE.equals(cmd)) {
             Long numL = Long.parseLong(num);
             return decode(numL, SHIN_10);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
+        return null;
 
     }
 
-    public static Long encode(String A, int B) {
+    public static String encode(String A, int B) {
         String str = A;
         int radix = B;
         Long result = Long.parseLong(str, radix);
-        return result;
+        return String.valueOf(result);
     }
 
     public static String decode(Long A, int B) {
