@@ -1,5 +1,7 @@
 package codecheck;
 
+import java.util.regex.Pattern;
+
 public class App {
 
     private static String ENCODE = "encode";
@@ -60,13 +62,10 @@ public class App {
         return result;
     }
 
-
-    public static boolean isNumber(String num) {
-        try {
-            Integer.parseInt(num);
+    public boolean isNumber(String num){
+        if(Pattern.matches("^[1-9]?[0-9]+$", num)){
             return true;
-            } catch (NumberFormatException e) {
-            return false;
         }
+        return false;
     }
 }
