@@ -18,8 +18,8 @@ public class App {
 
     public static String answer(String args, String args2) {
         String str = null;
-        String cmd = args.toString();
-        String num = args2.toString();
+        String cmd = args;
+        String num = args2;
         //引数二つ目の0判定
         if (!num.isEmpty()) {
             str = num;
