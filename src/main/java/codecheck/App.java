@@ -28,7 +28,8 @@ public class App {
         //}
 
         //処理
-        if (isNumber(num) && ENCODE.equals(cmd)) {
+        //if (isNumber(num) && ENCODE.equals(cmd)) {
+            if (ENCODE.equals(cmd)) {
             return  encode(num, SHIN_10);
         } else if (DECODE.equals(cmd)) {
             Long numL = Long.parseLong(num);
