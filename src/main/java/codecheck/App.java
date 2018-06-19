@@ -62,7 +62,7 @@ public class App {
         return result;
     }
 
-    public boolean isNumber(String num){
+    public static boolean isNumber(String num){
         if(Pattern.matches("^[1-9]?[0-9]+$", num)){
             return true;
         }
