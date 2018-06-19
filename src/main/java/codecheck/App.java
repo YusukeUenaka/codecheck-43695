@@ -23,12 +23,12 @@ public class App {
         String cmd = args;
         String num = args2;
         //引数二つ目の0判定
-        if (!num.isEmpty()) {
-            str = num;
-        }
+        //if (!num.isEmpty()) {
+        //    str = num;
+        //}
 
         //処理
-        if (isNumber(str) && ENCODE.equals(cmd)) {
+        if (isNumber(num) && ENCODE.equals(cmd)) {
             return  encode(num, SHIN_10);
         } else if (DECODE.equals(cmd)) {
             Long numL = Long.parseLong(num);
